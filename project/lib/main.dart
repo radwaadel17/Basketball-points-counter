@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(BasketballPointerCounterApp());
+  runApp(const BasketballPointerCounterApp());
 }
 
 class BasketballPointerCounterApp extends StatefulWidget {
+  const BasketballPointerCounterApp({super.key});
+
   
   @override
   State<BasketballPointerCounterApp> createState() => _BasketballPointerCounterAppState();
 }
 
 class _BasketballPointerCounterAppState extends State<BasketballPointerCounterApp> {
-  @override
   int teamApoints = 0 ;
 
   int teampPoints = 0 ;
@@ -62,13 +63,14 @@ class _BasketballPointerCounterAppState extends State<BasketballPointerCounterAp
     });
   }
 
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.pink,
-          title: Text('Points Counter'),
+          title: const Text('Points Counter'),
         ),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -78,7 +80,7 @@ class _BasketballPointerCounterAppState extends State<BasketballPointerCounterAp
               children: [
                 Column(
                   children: [
-                    Text(
+                    const Text(
                       'Team A',
                       style: TextStyle(
                         fontSize: 35,
@@ -86,15 +88,19 @@ class _BasketballPointerCounterAppState extends State<BasketballPointerCounterAp
                     ),
                     Text(
                       '$teamApoints',
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 140,
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.only(top: 16),
+                      padding: const EdgeInsets.only(top: 16),
                       child: ElevatedButton(
                         onPressed: addonepointsA,
-                        child: Text(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.pink,
+                          minimumSize: const Size(120, 40),
+                        ),
+                        child: const Text(
                           'Add 1 point',
                           style: TextStyle(
                             fontSize: 24,
@@ -102,17 +108,17 @@ class _BasketballPointerCounterAppState extends State<BasketballPointerCounterAp
                             //fontStyle: FontStyle.normal,
                           ),
                         ),
-                        style: ElevatedButton.styleFrom(
-                          primary: Colors.pink,
-                          minimumSize: Size(120, 40),
-                        ),
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.only(top: 20),
+                      padding: const EdgeInsets.only(top: 20),
                       child: ElevatedButton(
                         onPressed: addtwopointsA,
-                        child: Text(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.pink,
+                          minimumSize: const Size(120, 40),
+                        ),
+                        child: const Text(
                           'Add 2 point',
                           style: TextStyle(
                             fontSize: 24,
@@ -120,17 +126,17 @@ class _BasketballPointerCounterAppState extends State<BasketballPointerCounterAp
                             //fontStyle: FontStyle.normal,
                           ),
                         ),
-                        style: ElevatedButton.styleFrom(
-                          primary: Colors.pink,
-                          minimumSize: Size(120, 40),
-                        ),
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.only(top: 20),
+                      padding: const EdgeInsets.only(top: 20),
                       child: ElevatedButton(
                         onPressed: () {},
-                        child: Text(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.pink,
+                          minimumSize: const Size(120, 40),
+                        ),
+                        child: const Text(
                           'Add 3 point',
                           style: TextStyle(
                             fontSize: 24,
@@ -138,15 +144,11 @@ class _BasketballPointerCounterAppState extends State<BasketballPointerCounterAp
                             //fontStyle: FontStyle.normal,
                           ),
                         ),
-                        style: ElevatedButton.styleFrom(
-                          primary: Colors.pink,
-                          minimumSize: Size(120, 40),
-                        ),
                       ),
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 450,
                   child: VerticalDivider(
                     thickness: 1,
@@ -155,7 +157,7 @@ class _BasketballPointerCounterAppState extends State<BasketballPointerCounterAp
                 ),
                 Column(
                   children: [
-                    Text(
+                    const Text(
                       'Team B',
                       style: TextStyle(
                         fontSize: 35,
@@ -163,15 +165,19 @@ class _BasketballPointerCounterAppState extends State<BasketballPointerCounterAp
                     ),
                     Text(
                       '$teampPoints',
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 140,
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.only(top: 16),
+                      padding: const EdgeInsets.only(top: 16),
                       child: ElevatedButton(
                         onPressed: addonepointsB ,
-                        child: Text(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.pink,
+                          minimumSize: const Size(120, 40),
+                        ),
+                        child: const Text(
                           'Add 1 point',
                           style: TextStyle(
                             fontSize: 24,
@@ -179,17 +185,17 @@ class _BasketballPointerCounterAppState extends State<BasketballPointerCounterAp
                             //fontStyle: FontStyle.normal,
                           ),
                         ),
-                        style: ElevatedButton.styleFrom(
-                          primary: Colors.pink,
-                          minimumSize: Size(120, 40),
-                        ),
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.only(top: 20),
+                      padding: const EdgeInsets.only(top: 20),
                       child: ElevatedButton(
                         onPressed: addtwopointsB,
-                        child: Text(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.pink,
+                          minimumSize: const Size(120, 40),
+                        ),
+                        child: const Text(
                           'Add 2 point',
                           style: TextStyle(
                             fontSize: 24,
@@ -197,27 +203,23 @@ class _BasketballPointerCounterAppState extends State<BasketballPointerCounterAp
                             //fontStyle: FontStyle.normal,
                           ),
                         ),
-                        style: ElevatedButton.styleFrom(
-                          primary: Colors.pink,
-                          minimumSize: Size(120, 40),
-                        ),
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.only(top: 20),
+                      padding: const EdgeInsets.only(top: 20),
                       child: ElevatedButton(
                         onPressed: addthreepointsB,
-                        child: Text(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.pink,
+                          minimumSize: const Size(120, 40),
+                        ),
+                        child: const Text(
                           'Add 3 point',
                           style: TextStyle(
                             fontSize: 24,
                             color: Colors.black,
                             //fontStyle: FontStyle.normal,
                           ),
-                        ),
-                        style: ElevatedButton.styleFrom(
-                          primary: Colors.pink,
-                          minimumSize: Size(120, 40),
                         ),
                       ),
                     ),
@@ -227,16 +229,16 @@ class _BasketballPointerCounterAppState extends State<BasketballPointerCounterAp
             ),
             ElevatedButton(
               onPressed: reset,
-              child: Text(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.pink,
+                minimumSize: const Size(160, 40),
+              ),
+              child: const Text(
                 'Reset',
                 style: TextStyle(
                   fontSize: 24,
                   color: Colors.black,
                 ),
-              ),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.pink,
-                minimumSize: Size(160, 40),
               ),
             ),
           ],
